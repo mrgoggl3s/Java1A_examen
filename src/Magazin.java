@@ -80,7 +80,9 @@ public class Magazin {
     }
 
     public void verificareClient(String numeClient) throws ClientInexistentException {
-        if (!listaClientiMagazin.contains(new Client(numeClient, 0))) {
+        boolean anyMatch = listaClientiMagazin.stream()
+                .anyMatch(client -> client.getNume().equals(numeClient));
+        if (!anyMatch) {
             throw new ClientInexistentException("client inexistent");
         }
 
