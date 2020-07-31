@@ -80,15 +80,10 @@ public class Magazin {
     }
 
     public void verificareClient(String numeClient) throws ClientInexistentException {
-        Client client = null;
-        for (Client clientDeIterat : listaClientiMagazin) {
-            if (clientDeIterat.getNume().equals(numeClient)) {
-                client = clientDeIterat;
-            }
+        if (!listaClientiMagazin.contains(new Client(numeClient, 0))) {
+            throw new ClientInexistentException("client inexistent");
         }
-        if (client == null) {
-            throw new ClientInexistentException("Client Inexistent");
-        }
+
     }
 
     public void adaugaProdusInStoculMagazinului(Produs produs) {
