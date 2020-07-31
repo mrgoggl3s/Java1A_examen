@@ -20,6 +20,7 @@ public class Client  {
         this.nume = nume;
         this.anInregistrare = anInregistrare;
         this.cosCumparaturiClient = new HashMap<>();
+        System.out.println("s-a creat clientul");
     }
 
     public void adaugaProdusInCos(Produs produs, int cantitate) {
