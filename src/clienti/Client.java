@@ -42,9 +42,10 @@ public class Client  {
 
     public void afisareCos() {
         System.out.println("se afiseaza cosul clientului " + this.nume);
-        Set<Produs> produses = cosCumparaturiClient.keySet();
-        produses.stream()
-                .forEach(produs-> System.out.println(cosCumparaturiClient.get(produs) + "x"+ produs  ));
+        Set<Map.Entry<Produs, Integer>> entries = cosCumparaturiClient.entrySet();
+        entries.stream()
+                .forEach(entry -> System.out.println(entry.getValue().toString() + entry.getKey().toString()));
+
     }
 
 
