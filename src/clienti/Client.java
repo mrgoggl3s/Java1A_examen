@@ -42,22 +42,11 @@ public class Client  {
 
     public void afisareCos() {
         System.out.println("se afiseaza cosul clientului " + this.nume);
-        Set<Map.Entry<Produs, Integer>> entries = cosCumparaturiClient.entrySet();
-        double pretFinal=0;
-        for(Map.Entry<Produs, Integer> pereche : entries){
-            Produs p = pereche.getKey();
-            Integer nrProdus = pereche.getValue();
-            System.out.println("\t avem "+ nrProdus + " x "+p);
-            if(this.anInregistrare<2018){
-                pretFinal += p.getPret()*0.9*nrProdus;
-                System.out.println("Cost total cu discount de vechime: "+ pretFinal);
-            }else{
-                pretFinal =+ p.getPret()*nrProdus;
-                System.out.println("Cost total: "+ pretFinal);
-            }
-
-        }
+        Set<Produs> produses = cosCumparaturiClient.keySet();
+        produses.stream()
+                .forEach(produs-> System.out.println(cosCumparaturiClient.get(produs) + "x"+ produs  ));
     }
+
 
 
     public String getNume() {

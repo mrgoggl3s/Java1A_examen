@@ -34,4 +34,8 @@ public class Laptop extends Produs {
                 ", areTouchScreen=" + areTouchScreen +
                 "} " + super.toString();
     }
+
+
+
+
 }

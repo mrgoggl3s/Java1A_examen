@@ -1,5 +1,7 @@
 package produse;
 
+import java.util.Objects;
+
 public class Produs {
 
     private double pret;
@@ -45,5 +47,16 @@ public class Produs {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Produs produs = (Produs) o;
+        return Objects.equals(producator, produs.producator);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(producator);
+    }
 }
