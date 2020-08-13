@@ -15,6 +15,8 @@ import java.util.Scanner;
             Laptop laptopSamsung = new Laptop(1200, 10, "samsung", 8, true);
             Telefon telefonHuawei = new Telefon(350, 15, "huawei", 1800, 12);
             Televizor tvSony = new Televizor(750, 4, "sony", 108, true);
+
+
             Magazin.getInstance().adaugaProdusInStoculMagazinului(laptopApple);
             Magazin.getInstance().adaugaProdusInStoculMagazinului(laptopSamsung);
             Magazin.getInstance().adaugaProdusInStoculMagazinului(telefonHuawei);

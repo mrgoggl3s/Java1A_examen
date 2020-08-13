@@ -6,22 +6,18 @@ import produse.Telefon;
 import produse.Televizor;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Magazin {
 
     private List<Client> listaClientiMagazin;
     private List<Produs> produseInStoc;
     private static Magazin instantaMagazin;
-    private Map<List<Client>, List<Produs>> produseByClient;
 
 
     private Magazin() {
         this.listaClientiMagazin = new ArrayList<>();
         this.produseInStoc = new ArrayList<>();
-        this.produseByClient = new HashMap<>();
     }
 
     public static Magazin getInstance() {

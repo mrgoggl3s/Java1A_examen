@@ -1,12 +1,14 @@
 package produse;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Produs {
+public class Produs implements Serializable {
 
     private double pret;
     private int stocActual;
     private String producator;
+
 
     public Produs(double pret, int stocActual, String producator) {
         this.pret = pret;
